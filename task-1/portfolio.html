@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>harshita</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="header">
+       <div class="container">
+        <nav>
+            <span class="logo">Harshita</span>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#project">PROJECTS</a></li>
+                <li><a href="#resume">RESUME</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p class="greet">Hello, this is</p>
+            <h1 class="name">HARSHITA MEENA</h1>
+            <h5 class="intro">A CS engineering student who is enthusiast to learn new Skills and work on new projects.</h5>
+        </div>
+       </div> 
+    </div>
+
+       <!--about section-->
+    <div class="about" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                   <img src="about.png" alt="">  
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p class="intro-p">I am a dedicated, organized and methodical individual. I have good interpersonal skills, am an excellent team worker and am keen and very willing to learn and develop new skills. I am reliable and dependable and often seek new responsibilities within a wide range of employment areas.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills"> 
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing web interfaces</li>
+                            <li><span>web-development</span><br>building website</li>
+                            <li><span>c/c++</span><br>basic knowledge of the concepts</li>
+                            <li><span>cyber security</span><br>keep the data safe</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021-current</span><br>B.tech CSE from GGSIPU</li>
+                            <li><span>2018-2020</span><br>GGSSS, Delhi.</li>
+                            <li><span>2016-2018</span><br>St.Teresa's Convent School, UP.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--projects section -->
+    <div class="project" id="project">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="hotel-web.png" alt="">
+                    <div class="layer">
+                        <h3>The Hotel Website</h3>
+                        <p>The website can be used to make or cancel reservation at the our hotel</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="pglife.png" alt="">
+                    <div class="layer">
+                        <h3>The PG-website</h3>
+                        <p>The website can be used to locate PG in a new city.for student</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="flowr.png" alt="">
+                    <div class="layer">
+                        <h3>E-Commerce Website</h3>
+                        <p>The website can be used to place order for the flowers.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">learn more</a>
+        </div>
+    </div>
+    <div class="contact" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-paper-plane"></i>contact@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>12334567</p>
+                    <div class="social-icon">
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                    <a href="resume.pdf" download class="btn btn2" id="Resume">download Resume</a>
+                </div>
+                <div class="contact-right">
+                        <form>
+                            <input type="text" name="name"placeholder="your name" required>
+                            <input type="email" name="email" placeholder="abc@gmail.com" required>
+                            <textarea name="message" id="" rows="6" placeholder="your message"></textarea>
+                            <button type="submit" class="btn btn2"> Submit</button>
+                        </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© Copyright 2023. Made by Harshita meena</p>
+        </div>
+    </div>
+    
+       <script>
+       
+       var tablinks =document.getElementsByClassName("tab-links");
+       var tabcontents =document.getElementsByClassName("tab-contents");
+       function opentab(tabname){
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("active-link");
+        }
+
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove("active-tab");    
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+       }
+       
+       </script>
+</body>
+</html>
